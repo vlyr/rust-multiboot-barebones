@@ -12,11 +12,11 @@ clean:
 
 iso: build
 	@cp ./grub.cfg ./build/isofiles/boot/grub/grub.cfg
-	@cp ./target/$(arch)-none-bodaci/debug/bodaci-rs ./build/isofiles/boot/kernel.bin
-	@grub-mkrescue -o build/bodaci-$(arch).iso ./build/isofiles
+	@cp ./target/$(arch)-none-bare_metal/debug/os ./build/isofiles/boot/kernel.bin
+	@grub-mkrescue -o build/os-$(arch).iso ./build/isofiles
 
 build: prepare
 	@cargo build
 
 run: build
-	@qemu-system-x86_64 -cdrom build/bodaci-$(arch).iso
+	@qemu-system-x86_64 -cdrom build/os-$(arch).iso
