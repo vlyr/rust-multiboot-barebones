@@ -4,6 +4,7 @@
 use core::arch::global_asm;
 use core::panic::PanicInfo;
 
+// I hope there's a more elegant way to link Rust with Assembly and use a custom linker script
 global_asm!(include_str!("multiboot_header.S"));
 global_asm!(include_str!("start.S"));
 

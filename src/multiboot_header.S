@@ -1,3 +1,4 @@
+; https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html
 .section .multiboot_header
 header_start:
     .ALIGN 8
