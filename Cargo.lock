@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "bodaci-rs"
+name = "rust-multiboot-barebones"
 version = "0.1.0"
